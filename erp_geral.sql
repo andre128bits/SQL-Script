@@ -6333,3 +6333,9 @@ select * from e045pla where ctared in(22107,12398)
 
 
 select * from E600MCC where codfil=8 and numcco='08 CH DEVOL'
+
+select * from E600MCC where vlrmov=1175.18
+select * from e600mcc where numcco='06.000.500.1-5' and sitmcc='A'
+select * from E099UXC where numcco='06.000.500.1-5'
+
+select * from e001tfi
