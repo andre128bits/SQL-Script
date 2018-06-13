@@ -6309,7 +6309,6 @@ select CTARED,* from e301mcr where numtit='190377205'
 
 
 
-
 select * from e000lpa where CodPra in(19,25,26,29) order by datfim
  - 19314
 

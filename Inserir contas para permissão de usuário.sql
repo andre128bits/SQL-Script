@@ -2,6 +2,7 @@ use sapiensctb
 select ctared from e099uxb where codusu=23 order by ctared asc
 select ctafin from e099uxf where codusu=23 order by ctafin asc
 
+
 select ctafin from e099uxf where codusu=36 order by ctafin asc
 select ctafin from e099uxf where codusu=37 order by ctafin asc
 select ctafin from e099uxf where codusu=202 order by ctafin asc

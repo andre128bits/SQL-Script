@@ -3,6 +3,7 @@
 
 
 
+
 use sapiensctb
 select count(*) as 'EM FILA' from usu_tmentor where usu_codfil in(3,4,8,9,18,30,33,34,35,41,53) and usu_tipsit=0
 select count(*) from usu_tmentorlog where usu_codfil in(3,4,8,9,18,30,33,34,35,41,53) 

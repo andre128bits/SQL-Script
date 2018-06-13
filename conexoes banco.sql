@@ -3,7 +3,6 @@ use sapiensctb_homologa
 
 
 
-
 SELECT
 	Processo      = spid
 	,Computador   = hostname
