@@ -6330,3 +6330,6 @@ select ctared,* from e501mcp where numtit='197' and codtpt='ANU' and codfil=33
 select ctared,* from e501tcp where numtit='197' and codtpt='ANU' and codfil=33
 
 select * from e045pla where ctared in(22107,12398)
+
+
+select * from E600MCC where codfil=8 and numcco='08 CH DEVOL'
