@@ -6320,7 +6320,7 @@ select * from e000lpa where CodPra in(19,25,26,29) order by datfim
 select count(*) from e000lpa where datfim>='2018-05-12'
 select count(*) from e000lpa where datfim<'2018-05-12'
 
-select count(*) from e000lpa where datfim>='2018-05-12'
+select count(*) from e000lpa where datfim>='2018-05-10'
 select count(*) from e000lpa where datfim<'2018-05-12'
 
 
@@ -6339,3 +6339,9 @@ select * from e600mcc where numcco='06.000.500.1-5' and sitmcc='A'
 select * from E099UXC where numcco='06.000.500.1-5'
 
 select * from e001tfi
+
+
+select * from e301mcr where codfil in(20,24,54) and datger='2018-06-14'
+
+select * from e046hpd where codhpd=45
+
