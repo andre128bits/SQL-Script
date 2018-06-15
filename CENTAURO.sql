@@ -9,14 +9,14 @@ select count(*) as 'EM FILA' from usu_tmentor where usu_codfil in(3,4,8,9,18,30,
 select count(*) from usu_tmentorlog where usu_codfil in(3,4,8,9,18,30,33,34,35,41,53) 
 
 --{
-	select * from usu_tmentor where usu_codfil in(3,4,8,9,18,30,31,33,34,35,41,44,53) and usu_tipsit=0
+	select * from usu_tmentor where usu_codfil in(3,4,8,9,18,30,31,33,34,35,41,44,53,20,24,54) and usu_tipsit=0
 	select *,CONVERT(NVARCHAR, CONVERT(DATETIME, cast(replace(cast(usu_hormov as money)/3600,',','.') as money)/24), 108) as HorasMinutos 
-	  from usu_tmentorlog where usu_codfil in(3,4,8,9,18,30,31,33,34,35,41,44,53) and usu_datmov='2018-06-11' order by usu_datmov desc, usu_hormov desc
+	  from usu_tmentorlog where usu_codfil in(3,4,8,9,18,30,31,33,34,35,41,44,53,20,24,54) and usu_datmov='2018-06-15' order by usu_datmov desc, usu_hormov desc
 --}
 --{
 	select * from usu_tmentor where usu_codfil in(20,24,54) and usu_tipsit=0 
 	select *,CONVERT(NVARCHAR, CONVERT(DATETIME, cast(replace(cast(usu_hormov as money)/3600,',','.') as money)/24), 108) as HorasMinutos 
-	  from usu_tmentorlog where usu_codfil in(44)  order by usu_datmov desc, usu_hormov desc
+	  from usu_tmentorlog where usu_codfil in(20,24,54)  order by usu_datmov desc, usu_hormov desc
 --}
 
 

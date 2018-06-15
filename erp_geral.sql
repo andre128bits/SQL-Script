@@ -6257,7 +6257,7 @@ select * from e501mcp where numtit='RH0000010k7'
 
 
 use sapiensctb
-select datcad,horcad,* from e095for where usucad=187 and datcad='2018-06-08' order by codfor desc
+select datcad,horcad,* from e095for where usucad=187 and datcad='2018-06-11' order by codfor desc
 
 Erro na execução do processo automático: Contabilização não finalizada no módulo Contas a Pagar: Falha ao processar movimentos:
 Histórico: 578
@@ -6345,3 +6345,22 @@ select * from e301mcr where codfil in(20,24,54) and datger='2018-06-14'
 
 select * from e046hpd where codhpd=45
 
+
+select * from e301mcr where datmov='2018-05-03' and codfil=35
+select * from e640lct where numlot=1306670801
+select * from e600mcc where numcco='193003' and datmov='2018-05-03' and seqmov=34
+
+
+select sitpro,* from e075pro
+P44461
+
+select * from e440isc where codser like '%44%'
+
+
+use sapiensctb
+select datcad,horcad,* from e095for where usucad=187 and datcad>='2018-06-11' order by codfor desc
+
+select * from e095for where nomfor like '%kalunga%'
+
+select * from e640lct where numlct=1306742208
+select * from e640lot where numlot=297706
