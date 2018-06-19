@@ -6316,8 +6316,14 @@ select * from e000lpa where CodPra in(19,25,26,29) order by datfim
  select * from e000lpa where tiplor='E' and codpra=21
  select tiplor from e000lpa group by tiplor
 
+select * from e000lpa where datfim>='2018-06-18' order by codpra
+select * from e000age where codpra=1
+select * from e000era where codpra=1
+--delete from e000age where codpra=1
+--delete from e000era where codpra=1
+--delete from e000lpa where codpra=1
 
-select count(*) from e000lpa where datfim>='2018-05-12'
+select count(*) from e000lpa where datfim='2018-06-19' and codpra=1
 select count(*) from e000lpa where datfim<'2018-05-12'
 
 select count(*) from e000lpa where datfim>='2018-05-17'
@@ -6373,9 +6379,46 @@ select * from e501tcp where numtit='RH0000010LF'
 
 
 
-
+select * from e640lct where codusu=53 and datlct>='2018-01-31' and codfil=3
 select * from e640lct where codusu=53 and cpllct like '%IRRF%fl.pagto%' and datlct='2018-01-31' and codfil=3
-select * from e640lct where cpllct like '%IRRF%' and datlct='2018-01-31' and codfil=3
+select * from e640lct where cpllct like '%IRRF%' and datlct='2018-02-28' and codfil=3
 select * from e640lct where cpllct like '%IRRF%' and datlct>='2017-01-31' and codfil=3
 select * from e046hpd where codhpd in(516,185,517)
-select * from e640lct where codhpd in(516,185,517) and orilct='PAG' and codfil=3
+
+
+select * from e640lct where cpllct like '%IRRF%' and datlct>='2018-02-28' and codfil=3
+select * from e640lct where cpllct like '%IRRF%' and codfil=3 and datlct>='2018-01-31'
+
+select * from e640lct where cpllct like '%irrf%rescisao%' and datlct='2018-01-31' and codfil=3
+
+select sum(vlrlct) from e640lct where cpllct like '%irrf%rescisao%' and datlct='2018-01-31' and codfil=3
+select sum(vlrlct) from e640lct where cpllct like '%IRRF%' and datlct='2018-02-28' and codfil=3
+
+select * from e640lct where codhpd in(516,185,517) and orilct='PAG' and codfil=3 order by datlct desc
+
+
+
+select * from e640lct where cpllct like '%IRRF%' and codfil=3 and datlct='2018-01-31'
+select * from e640lct where cpllct like '%01/2018%' and codfil=3 and ctadeb=22031
+select * from e640lct where codfil=3 and ctadeb=22031 and datlct>='2017-12-01'
+select * from e046hpd where codhpd in(516,185,517)
+
+select ctared,* from e501tcp where codfil=3 and codtpt='IRF' and obstcp like '%IRRF Folha%'
+select ctared,* from e501tcp where codfil=3 and codtpt='IRF' and obstcp like '%IRRF Rescisao%'
+select ctared,* from e501tcp where codfil=3 and codtpt='IRF' and obstcp like '%IRRF Férias%'
+select vlrliq,ctared,* from e501mcp where numtit in(select numtit from e501tcp where codfil=3 and codtpt='IRF' and obstcp like '%IRRF Férias%') and seqmov>=2
+select * from e640lct where codfil=3 and ctadeb=22031 and datlct>='2011-12-01' and datlct<='2018-03-31'
+
+select ctared,* from e600mcc where numcco='193003' and datmov='2018-05-15'
+select ctared,* from e600rat where numcco='193003' and datmov='2018-05-15'
+select ctared,* from e501mcp where numcco='193003' and datcco='2018-05-15'
+select ctared,* from e501tcp where numtit='RH0000010IZ'
+
+select * from e046hpd where codhpd=186
+select * from e046hpd where deshpd like '%adto%'
+select * from e640lct where numlct=1306761704
+select * from e640lct where numlct=1306761705
+
+select * from e640lct where numlct=1307070318
+select * from e640lct where numlct=1307070319
+
