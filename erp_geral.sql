@@ -6320,7 +6320,7 @@ select * from e000lpa where CodPra in(19,25,26,29) order by datfim
 select count(*) from e000lpa where datfim>='2018-05-12'
 select count(*) from e000lpa where datfim<'2018-05-12'
 
-select count(*) from e000lpa where datfim>='2018-05-10'
+select count(*) from e000lpa where datfim>='2018-05-17'
 select count(*) from e000lpa where datfim<'2018-05-12'
 
 
@@ -6358,9 +6358,24 @@ select * from e440isc where codser like '%44%'
 
 
 use sapiensctb
-select datcad,horcad,* from e095for where usucad=187 and datcad>='2018-06-11' order by codfor desc
+select datcad,horcad,* from e095for where usucad=187 and datcad>='2018-06-18' order by codfor desc
 
 select * from e095for where nomfor like '%kalunga%'
 
-select * from e640lct where numlct=1306742208
 select * from e640lot where numlot=297706
+
+select * from e600mcc where numcco='06.006212.0-9' and datmov='2018-05-18' and seqmov=12
+select * from e640lct where numlct=1306742208
+select * from e501mcp where numcco='06.006212.0-9' and datcco='2018-05-18' and seqcco=12
+select * from e501tcp where numtit='RH0000010H2'
+
+select * from e501tcp where numtit='RH0000010LF'
+
+
+
+
+select * from e640lct where codusu=53 and cpllct like '%IRRF%fl.pagto%' and datlct='2018-01-31' and codfil=3
+select * from e640lct where cpllct like '%IRRF%' and datlct='2018-01-31' and codfil=3
+select * from e640lct where cpllct like '%IRRF%' and datlct>='2017-01-31' and codfil=3
+select * from e046hpd where codhpd in(516,185,517)
+select * from e640lct where codhpd in(516,185,517) and orilct='PAG' and codfil=3
