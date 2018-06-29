@@ -8,6 +8,11 @@ use sapiensctb
 select count(*) as 'EM FILA' from usu_tmentor where usu_codfil in(3,4,8,9,18,30,33,34,35,41,53) and usu_tipsit=0
 select count(*) from usu_tmentorlog where usu_codfil in(3,4,8,9,18,30,33,34,35,41,53) 
 
+select * from e301mcr where numtit='190272367'
+
+select * from usu_tmentor where usu_codfil=18 and usu_codtns='E.REC' and usu_numtit='190272367' and usu_ppaid=4077968
+--update usu_tmentor set usu_datmov='2018-06-21' where usu_codfil=18 and usu_codtns='E.REC' and usu_numtit='190272367' and usu_ppaid=4077968
+
 --{
 	select * from usu_tmentor where usu_codfil in(3,4,8,9,18,30,31,33,34,35,41,44,53,20,24,54) and usu_tipsit=0
 	select *,CONVERT(NVARCHAR, CONVERT(DATETIME, cast(replace(cast(usu_hormov as money)/3600,',','.') as money)/24), 108) as HorasMinutos 

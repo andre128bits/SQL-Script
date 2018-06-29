@@ -6316,14 +6316,14 @@ select * from e000lpa where CodPra in(19,25,26,29) order by datfim
  select * from e000lpa where tiplor='E' and codpra=21
  select tiplor from e000lpa group by tiplor
 
-select * from e000lpa where datfim>='2018-06-18' order by codpra
+select * from e000lpa where datfim>='2018-05-18' and tiplor='E' order by codpra
 select * from e000age where codpra=1
 select * from e000era where codpra=1
 --delete from e000age where codpra=1
 --delete from e000era where codpra=1
 --delete from e000lpa where codpra=1
 
-select count(*) from e000lpa where datfim='2018-06-19' and codpra=1
+select count(*) from e000lpa where datfim>='2018-05-01' and codpra=1
 select count(*) from e000lpa where datfim<'2018-05-12'
 
 select count(*) from e000lpa where datfim>='2018-05-17'
@@ -6415,10 +6415,176 @@ select ctared,* from e501mcp where numcco='193003' and datcco='2018-05-15'
 select ctared,* from e501tcp where numtit='RH0000010IZ'
 
 select * from e046hpd where codhpd=186
-select * from e046hpd where deshpd like '%adto%'
+select * from e046hpd where deshpd like '%VLR.REF.DEPOSITO EM CHEQUE%'
 select * from e640lct where numlct=1306761704
 select * from e640lct where numlct=1306761705
 
 select * from e640lct where numlct=1307070318
-select * from e640lct where numlct=1307070319
+select * from e640lct where numlct=1307070280
 
+select * from e600mcc where codtns='90649' and ctared=12335
+select * from e045pla where ctared=42190
+
+select * from e600mcc where numcco='08CH descontad' and datmov='2018-05-18' 
+select * from e600rat where numcco='08CH descontad' and datmov='2018-05-18' 
+
+select * from e600cco where numcco='08CH descontad'
+
+
+
+select ctared,* from e600MCC where numcco='08CH descontad' AND DATMOV='2018-05-21'
+select * from e600TRF where numcco='08CH descontad' AND DATMOV='2018-05-21'
+
+
+
+select ctared,* from e501tcp where numtit='RH0000010MD'
+select ctared,* from e501mcp where numtit='RH0000010MD'
+
+select * from e640lct where numlct=1307062549
+select * from e301mcr where numtit='190352253'
+
+select * from e099uxb where codemp=11 and codusu=215 and ctared in(32002,32003,32004)
+select * from e099uxf where codemp=11 and codusu=215 and ctafin in(32002,32003,32004)
+select * from e099uxb where codemp=11 and codusu=116 and ctared=15115
+select * from e091plf where ctafin=10000
+
+select * from e640lct where codusu=215 and ctadeb=35005
+
+select nomusu,situsu,* from e099usu where codemp=11 and situsu='A' and nomusu like '%samuel%'
+
+
+select * from e099uxf where codemp=11 and horger=999
+select * from e099uxb where codemp=11 and horger=999
+
+select count(*) from e099uxf where codemp=11 and horger=999
+select count(*) from e099uxb where codemp=11 and horger=999
+
+
+select * from e085hcl where codcli=320149
+--update e099uxb set situxb='A' where codusu=187 and codemp=11
+
+select * from e099uxb where datger>='2018-06-01' 
+select codusu from e099uxb where datger>='2018-06-22' group by codusu order by codusu
+
+
+
+use sapiensctb
+select * from e600rat where datmov='2018-06-08' and codfil=3 and seqmov=64 and numcco='06.006212.0-9'
+select * from e600mcc where datmov='2018-06-08' and codfil=3 and seqmov=64 and numcco='06.006212.0-9'
+
+select * from e600rat where codfil=3 and numcco='06.006212.0-9' and datmov='2018-06-08' and seqmov=63
+
+select * from e600rat where ctared<>ctafin and codtns='90667'
+select * from e600rat where ctared=0 
+select * from e440rat where ctared=0
+select numlot,* from e440nfc where numnfc=2018353 and codfor=3001303
+
+select * from e099uxb where codusu=224 and ctared=42313
+select * from e099uxf where codusu=224 and ctafin=42313
+select * from e640lct where codusu=224 and ctadeb=42313
+select * from e045pla where ctared=42313
+select * from e099usu where nomusu like '%33-deise%'
+select * from e600rat where usuger=224 and ctared=42313
+select * from e440rat where usuger=224 and ctafin=42313
+
+
+select * from e099uxb where codusu=86 and ctared=22197
+select * from e099uxf where codusu=86 and ctafin=22197 
+
+
+select * from e600rat where ctared=22197 and usuger=86
+select * from e640lct where ctadeb=22197 and codusu=86
+
+
+select * from e099uxb where horger=999 and datger='2018-06-22'
+select * from e099uxf where horger=999 and datger='2018-06-22'
+
+select * from e099uxb where horger=999 and datger='2018-06-23'
+select * from e099uxf where horger=999 and datger='2018-06-23'
+
+
+select * from e099uxb where horger=999 and datger='2018-06-24'
+select * from e099uxf where horger=999 and datger='2018-06-24'
+
+select * from e099uxb where horger=999 and datger='2018-06-25' and codusu=86
+select * from e099uxf where horger=999 and datger='2018-06-25' and codusu=86
+select * from e099uxb where horger=999 and datger='2018-06-25'
+select * from e099uxf where horger=999 and datger='2018-06-25' 
+
+select * from e099uxb where horger=999 and datger='2018-06-26'
+select * from e099uxf where horger=999 and datger='2018-06-26' 
+
+
+Select CtaRed From E600Rat Where CodEmp=11 and UsuGer<>0 and CtaRed<>0 Group by CtaRed
+
+select * from e600mcc where ctared=32051
+select * from e600rat where ctared=32051
+
+select * from e640lct where ctacre=32051 and datlct>'2018-01-01' and codfil=41
+select * from e640lct where ctadeb=32051 and datlct>'2017-01-01' and codfil=41
+
+select * from e600mcc where datmov='2018-06-19' and codfil=41
+
+
+select * from e600rat where ctared=22197 and usuger=86
+select * from e640lct where ctadeb=22197 and codusu=86
+select * from e600mcc where ctared=22197 and codusu=86
+select * from e440rat where usuger=86
+select ctared,* from e501mcp where usuger=86
+select ctared,* from e501rat where usuger=86
+
+
+
+Problema: 
+Nenhuma Conta Contábil Informada para Contabilização!
+Módulo..................: Contas a Receber
+
+Filial: 3
+Título: 190380061
+Transação: 90391
+Data: 20/6/2018
+Competência: 6/2018
+Descrição: VLR.REF.RECEBIMENTO 101-ALUGUEL GINASIO DE ESPORTES COMPET.06/2018 PRISCILA DUARTE MACALAO
+
+select ctared,* from e301mcr where numtit='190380061' 
+select * from usu_tmentor where usu_numtit='190380061'
+
+select numlot,* from e301mcr where obsmcr like '%mariana souza%' and datmov='2018-06-13'
+
+SELECT obsmcc,* FROM E600MCC WHERE SITMCC='I' and obsmcc<>'EXCLUÍDO!!!'
+
+
+
+select * from e301tcr where vlrori=3891.15	and datent>='2018-02-01'
+
+select * from usu_tmentor where usu_vlrmov=3891.15
+
+select * from e501tcp where codtns='90505' and codfil=34 and sittit='AV' and codtpt='IRF'
+
+
+select * from e501tcp where numtit like '12524' and codfil=3
+--update e501mcp set vlrabe=5585.35,vlrliq=5585.35,vlrmov=5585.35 where numtit like 'RH0000010MC' and codfil=3 and codtpt='SAL'
+
+select * from e501mop where numtit like 'RH0000010MC' and codfil=3
+
+
+select * from e501tcp where codtns='90505' and codfil=30
+
+select * from e501tcp where usuger=187 and datger='2018-06-26'
+
+select * from usu_tmentorlog order by usu_datmov desc
+
+select * from e600mcc where datmov='2018-05-31' and numcco='001'
+
+select * from e501tcp where usuger=187 and codtns='90505' and datger='2018-06-28'
+
+select * from e501tcp where numtit='RH0000010OL'
+
+select * from e095for where codfor=3002519
+
+select * from e501tcp where codtns='90505' and datger='2018-06-28'
+
+select * from e301mcr where numtit='190350343'
+select * from usu_tmentor where usu_numtit='190350343'
+
+select datger,numlot,* from e301mcr where datmov<'2018-06-01' and codfil=54

@@ -11,6 +11,7 @@ SELECT
 	,Bloqueado_Por = blocked
 	,TipoComando  = cmd
 	,Aplicativo   = program_name
+	,login_time = login_time
 	
 FROM
 	master..sysprocesses
@@ -30,7 +31,7 @@ SELECT blocked,* FROM master..sysprocesses where spid=130
 exec sp_who2
 exec sp_monitor
 
---kill 111
+--kill 183
 
 	Gestão Empresarial                                                                                                              
 
